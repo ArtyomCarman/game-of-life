@@ -1,0 +1,50 @@
+:root {
+  --header-bg: linear-gradient(to right, #11ffbd, #aaffa9);
+}
+
+body {
+  font-family: "Stick No Bills", sans-serif;
+  background: linear-gradient(to right, #ef629f, #eecda3);
+}
+
+.header {
+  background: var(--header-bg);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.game__title {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.game__board {
+  display: grid;
+  grid-template-columns: repeat(5, 50px); /* Увеличить после добавления js */
+  grid-template-rows: repeat(5, 50px); /* Увеличить после добавления js */
+  background-color: black;
+  width: 250px; /* Увеличить после добавления js */
+  height: 250px; /* Увеличить после добавления js */
+}
+
+.game__cell {
+  border: 1px solid grey;
+}
+
+.game__cell--active {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: red;
+  }
+}
